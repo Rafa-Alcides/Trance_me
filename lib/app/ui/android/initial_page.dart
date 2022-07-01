@@ -5,9 +5,8 @@ class InitialPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('initialPage')),
-      body: const Text("Initial Page"),
+    return const Scaffold(
+      body: Center(child: Text("Initial Page")),
     );
   }
 }
