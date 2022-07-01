@@ -9,4 +9,5 @@ class AppColor {
   static const bgFieldPassword = Color(0xFFE9EDF5);
   static const bgCards = Color(0xFFF9F0F0);
   static const bgHome = Color(0xFFF9E4D0);
+  static const black = Color(0xFF190402);
 }
