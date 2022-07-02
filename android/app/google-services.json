@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "331619959529",
+    "project_id": "trace-me-e090c",
+    "storage_bucket": "trace-me-e090c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331619959529:android:c3ff1429fa82149cb2a678",
+        "android_client_info": {
+          "package_name": "com.example.trance_me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331619959529-37gu10h7a2qmt43aa9hv3hv1436ar9kq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trance_me",
+            "certificate_hash": "eebc6f8e0e3f797893ad19e442f782bc242142c4"
+          }
+        },
+        {
+          "client_id": "331619959529-7psa1eufbuijpon1v055bep0m6hmk3n7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5v1H5Ju81t5wBPqLYRWCKx-gX2d1KahA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331619959529-7psa1eufbuijpon1v055bep0m6hmk3n7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
