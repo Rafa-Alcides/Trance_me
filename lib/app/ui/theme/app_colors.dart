@@ -10,4 +10,6 @@ class AppColor {
   static const bgCards = Color(0xFFF9F0F0);
   static const bgHome = Color(0xFFF9E4D0);
   static const black = Color(0xFF190402);
+  static const grey = Color(0xFF1D293F);
+  static const underline = Color(0xFFF97115);
 }

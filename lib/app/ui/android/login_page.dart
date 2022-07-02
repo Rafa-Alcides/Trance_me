@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:trance_me/app/ui/android/components/custom_button.dart';
+import 'package:trance_me/app/ui/android/components/custom_button_google.dart';
 import 'package:trance_me/app/ui/android/components/custon_button_facebook.dart';
 import '../theme/app_colors.dart';
 
@@ -35,6 +37,8 @@ class LoginPage extends StatelessWidget {
                 obscureText: true,
                 //initialValue: "emailteste@gmail.com",
                 decoration: InputDecoration(
+                    fillColor: AppColor.bgFields,
+                    filled: true,
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
                         borderSide: const BorderSide(color: AppColor.bgButton)),
@@ -59,27 +63,46 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 76),
             ],
           ),
-          const Text(
-            "Entre com",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 16),
-          ),
+          const TextButton(
+              onPressed: null,
+              child: Text(
+                "Entre com",
+                style: TextStyle(fontSize: 16),
+              )),
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(height: 20),
-              ElevatedButton(onPressed: () {}, child: const Text("Login")),
+              CustomButonSocial(
+                text: "Continuar com o Google",
+                ontap: () {},
+                icon: FontAwesomeIcons.google,
+              ),
               const SizedBox(height: 15),
               CustomButonFacebook(
-                  text: "Continuar com o Facebook", ontap: () {}),
+                  text: "Continuar com o Facebook",
+                  ontap: () {},
+                  icon: FontAwesomeIcons.facebook,
+                  color: AppColor.bgButtoFacebook),
               const SizedBox(height: 20),
-              TextButton(
-                style: TextButton.styleFrom(
-                    alignment: Alignment.topLeft,
-                    textStyle: const TextStyle(fontSize: 16)),
-                onPressed: null,
-                child: const Text("Esqueceu a Senha?"),
-              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  TextButton(
+                      onPressed: null,
+                      child: Text.rich(TextSpan(
+                          text: "Novo?",
+                          style: TextStyle(fontSize: 16),
+                          children: <TextSpan>[
+                            TextSpan(
+                                text: "Crie uma conta Agora",
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: AppColor.underline,
+                                    decoration: TextDecoration.underline))
+                          ])))
+                ],
+              )
             ],
           )
         ],

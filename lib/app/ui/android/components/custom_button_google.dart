@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:trance_me/app/ui/theme/app_colors.dart';
 
-class CustomButonFacebook extends StatelessWidget {
+class CustomButonSocial extends StatelessWidget {
   final double heigth;
-  final Color color;
+  final Color? color;
   final String text;
   final VoidCallback? ontap;
   final IconData icon;
-  const CustomButonFacebook(
+  const CustomButonSocial(
       {Key? key,
       this.heigth = 55.0,
       required this.text,
       required this.ontap,
       required this.icon,
-      required this.color})
+      this.color})
       : super(key: key);
 
   @override
@@ -32,14 +32,15 @@ class CustomButonFacebook extends StatelessWidget {
             children: [
               FaIcon(
                 icon,
-                color: AppColor.bgFieldCpf,
+                color: AppColor.bgButtoFacebook,
               ),
               const SizedBox(
                 width: 10,
               ),
               Text(text,
                   style: const TextStyle(
-                      fontSize: 16, color: AppColor.bgFieldCpf)),
+                    fontSize: 16,
+                  )),
             ],
           ),
         ),
