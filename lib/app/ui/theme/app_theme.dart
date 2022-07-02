@@ -5,6 +5,6 @@ final ThemeData appThemeData = ThemeData(
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: TextButton.styleFrom(
         backgroundColor: AppColor.bgButton,
-        padding: const EdgeInsets.symmetric(vertical: 30)),
+        padding: const EdgeInsets.symmetric(vertical: 15)),
   ),
 );

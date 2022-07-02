@@ -2,7 +2,7 @@ import 'package:get/route_manager.dart';
 import 'package:trance_me/app/routes/app_routes.dart';
 import 'package:trance_me/app/ui/android/home_page.dart';
 import 'package:trance_me/app/ui/android/initial_page.dart';
-import 'package:trance_me/app/ui/android/login/login_page.dart';
+import 'package:trance_me/app/ui/android/login_page.dart';
 
 class AppPages {
   static final routes = [

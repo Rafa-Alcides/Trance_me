@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:trance_me/app/ui/android/login/login_page.dart';
+import 'package:trance_me/app/ui/android/login_page.dart';
 import 'package:trance_me/app/ui/theme/app_colors.dart';
 
 class InitialPage extends StatefulWidget {
