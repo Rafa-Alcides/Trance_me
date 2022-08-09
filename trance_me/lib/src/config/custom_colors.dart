@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Map<int, Color> _swatchOpacity = {
+Map<int, Color> swatchOpacity = {
   50 : const Color.fromRGBO(134, 109, 109, .1),
   100 : const Color.fromRGBO(134, 109, 109, .2),
   200 : const Color.fromRGBO(134, 109, 109, .3),
@@ -23,10 +23,12 @@ abstract class CustomColors {
   static Color customText3 = const Color(0xFF1D293F);
   static Color customCardBackground = const Color(0xFFF9F0F0);
   static Color customText4 = const Color(0xFFF91515);
+  static Color customWhite = const Color(0xFFFFFFFF);
+  static Color customBlackText = const Color(0xFF1D293F);
 
   static MaterialColor customSwatchColor = MaterialColor(
     0xFF866D6D, 
-    _swatchOpacity
+    swatchOpacity
   );
 
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trance_me/src/auth/components/theme.dart';
 import 'package:trance_me/src/auth/sing_in_screen.dart';
+import 'package:trance_me/src/config/custom_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: TranceMeTheme.light,
+      theme: ThemeData(primarySwatch: CustomColors.customSwatchColor ),
       home: const SingInScreen(),
       debugShowCheckedModeBanner: false,
     );
