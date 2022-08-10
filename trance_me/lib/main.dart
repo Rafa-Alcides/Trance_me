@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trance_me/src/auth/sing_in_screen.dart';
+import 'package:trance_me/src/auth/sign_in_screen.dart';
 import 'package:trance_me/src/config/custom_colors.dart';
 
 void main() {

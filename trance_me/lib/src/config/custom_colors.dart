@@ -25,6 +25,7 @@ abstract class CustomColors {
   static Color customText4 = const Color(0xFFF91515);
   static Color customWhite = const Color(0xFFFFFFFF);
   static Color customBlackText = const Color(0xFF1D293F);
+  static Color customGrey = const Color(0xFFE9EDF5);
 
   static MaterialColor customSwatchColor = MaterialColor(
     0xFF866D6D, 
