@@ -4,8 +4,9 @@ import '../../config/custom_colors.dart';
 class CustomElevetedButton extends StatelessWidget {
 
   final String name;
+  final Function()? onPressed;
 
-  const CustomElevetedButton({super.key, required this.name});
+  const CustomElevetedButton({super.key, required this.name, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class CustomElevetedButton extends StatelessWidget {
           child: SizedBox(
             height: 50,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: onPressed,
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8)

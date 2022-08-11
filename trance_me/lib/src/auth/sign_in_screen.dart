@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trance_me/src/auth/sign_up_screen.dart';
 import 'package:trance_me/src/config/custom_colors.dart';
+import '../base/base_screen.dart';
 import 'components/custom_eleveted_button.dart';
 import 'components/custom_text_field.dart';
 
@@ -41,8 +42,17 @@ class SingInScreen extends StatelessWidget {
                   ),
                 ),
                 //*BOTÃO LOGIN
-                const CustomElevetedButton(
+                 CustomElevetedButton(
                   name: "Login",
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (c) {
+                          return  const BaseScreen();
+                        }
+                      )
+                    );
+                  },
                 ),
                 //* DIVISOR
                 Center(
