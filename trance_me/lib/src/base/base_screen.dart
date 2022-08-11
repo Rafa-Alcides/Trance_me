@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:trance_me/src/home/home_tab.dart';
 import '../config/custom_colors.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -24,7 +24,7 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         children: [
           Container(color: Colors.black),
-          Container(color: Colors.red),
+          const HomeTab(),
           Container(color: Colors.blue),
         ],
       ),
