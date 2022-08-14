@@ -3,7 +3,7 @@ import 'package:trance_me/src/home/home_tab.dart';
 import '../config/custom_colors.dart';
 
 class BaseScreen extends StatefulWidget {
-   const BaseScreen({super.key});
+  const BaseScreen({super.key});
 
   @override
   State<BaseScreen> createState() => _BaseScreenState();
@@ -11,14 +11,11 @@ class BaseScreen extends StatefulWidget {
 
 class _BaseScreenState extends State<BaseScreen> {
   int currentIndex = 0;
-  final pageController = PageController(
-    initialPage: 1
-  ); 
+  final pageController = PageController(initialPage: 1);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
@@ -28,10 +25,6 @@ class _BaseScreenState extends State<BaseScreen> {
           Container(color: Colors.blue),
         ],
       ),
-      
-      
-
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) {
@@ -46,14 +39,15 @@ class _BaseScreenState extends State<BaseScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: ""
+            label: "",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: ""
-          ),BottomNavigationBarItem(
+            label: "",
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
-            label: ""
+            label: "",
           ),
         ],
       ),

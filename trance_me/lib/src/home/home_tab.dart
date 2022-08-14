@@ -9,15 +9,14 @@ class HomeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("TranceMe", style: TextStyle(
-          fontSize: 19, 
-          color: CustomColors.customSwatchColor
-          ),
+        title: Text(
+          "TranceMe",
+          style: TextStyle(fontSize: 19, color: CustomColors.customSwatchColor),
         ),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
-        toolbarHeight: 30,  
+        toolbarHeight: 30,
       ),
       body: Column(
         children: [
@@ -25,12 +24,11 @@ class HomeTab extends StatelessWidget {
             children: [
               Expanded(
                 child: Divider(
-                    thickness: 2,
-                    color: CustomColors.customGreyLine,
-                  ),
+                  thickness: 2,
+                  color: CustomColors.customGreyLine,
+                ),
               ),
               Image.asset("assets/decoration.png"),
-
               SizedBox(
                 width: 40,
                 child: Divider(
@@ -40,7 +38,31 @@ class HomeTab extends StatelessWidget {
               ),
             ],
           ),
-          
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 15,
+              vertical: 10,
+            ),
+            child: SizedBox(
+              height: 40,
+              child: TextFormField(
+                decoration: InputDecoration(
+                  hintText: "Buscar",
+                  hintStyle: TextStyle(
+                    color: Colors.grey.shade300,
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  isDense: true,
+                  suffixIcon: const Icon(Icons.search, size: 20),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(60),
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
