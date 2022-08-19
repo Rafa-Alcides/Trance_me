@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:trance_me/src/pages/home/components/card_tile.dart';
+import '../../config/custom_colors.dart';
+import 'components/category_tile.dart';
+import 'package:trance_me/src/config/app_data.dart' as app_data;
 
-import '../config/custom_colors.dart';
-
-class HomeTab extends StatelessWidget {
+class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
+
+  @override
+  State<HomeTab> createState() => _HomeTabState();
+}
+
+class _HomeTabState extends State<HomeTab> {
+  String selectedCategory = "Tranças";
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +72,43 @@ class HomeTab extends StatelessWidget {
               ),
             ),
           ),
+          Container(
+            padding: const EdgeInsets.only(
+              left: 15,
+              top: 10,
+            ),
+            height: 90,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (_, index) {
+                return CategoryTile(
+                  onPressed: () {
+                    setState(() {
+                      selectedCategory = app_data.categories[index];
+                    });
+                    selectedCategory = app_data.categories[index];
+                  },
+                  category: app_data.categories[index],
+                  isSelected: app_data.categories[index] == selectedCategory,
+                );
+              },
+              separatorBuilder: (_, index) => const SizedBox(width: 20),
+              itemCount: app_data.categories.length,
+            ),
+          ),
+          Expanded(
+            child: ListView.separated(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              physics: const BouncingScrollPhysics(),
+              separatorBuilder: (_, index) => const SizedBox(height: 13),
+              itemCount: app_data.items.length,
+              itemBuilder: (_, index) {
+                return CardTile(
+                  item: app_data.items[index],
+                );
+              },
+            ),
+          )
         ],
       ),
     );
